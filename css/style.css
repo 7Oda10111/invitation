@@ -1,0 +1,133 @@
+:root {
+  --color: #92400e;
+  --gold-color: #a16207;
+  --light-color: #fdf8ed;
+  --second-color: #0f3d2e;
+}
+
+html {
+  background-color: var(--light-color);
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--light-color);
+  border: var(--color) 1px solid;
+  border-radius: 2px;
+  margin-inline: 40px;
+  margin-block: 10px;
+}
+#hero .container{
+  position: relative;
+  min-height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#hero .flower {
+  width: clamp(130px, 20vw, 180px);
+  position: absolute;
+  left: -60px;
+  top: -20px;
+  transform: rotate(-45deg);
+}
+#hero .logo {
+  width: 15%;
+  display: block;
+  margin: 20px auto;
+}
+#hero h3 {
+  font-family: "Markazi Text", serif;
+  font-weight: 900;
+  text-align: center;
+  color: var(--second-color);
+  word-spacing: 10px;
+}
+#hero .name-parent {
+ width: 100%;
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(10px, 4vw, 25px);
+  flex-wrap: wrap;
+  padding-inline: 10px;}
+#hero h1 {
+  font-family: "Aref Ruqaa", serif;
+  display: inline-block;
+  color: var(--gold-color);
+  font-size: clamp(28px, 7vw, 50px);
+}
+#hero .name-parent span {
+  color: var(--second-color);
+  font-size: clamp(24px, 6vw, 45px);
+}
+#hero .and {
+  color: var(--second-color);
+  font-size: clamp(40px, 10vw, 80px);
+  position: relative;
+  bottom: 10px;
+}
+#hero .date {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(15px, 5vw, 40px);
+}
+
+#hero .date .month,
+#hero .date .year {
+  font-family: "Cairo", sans-serif;
+  font-size: clamp(18px, 4vw, 30px);
+  font-weight: 500;
+  color: var(--second-color);
+}
+#hero .date .year {
+  padding-inline-start: clamp(15px, 5vw, 40px);
+  border-inline-start: 0.5px solid var(--color);
+}
+#hero .date .month {
+  padding-inline-end: clamp(15px, 5vw, 40px);
+  border-inline-end: 0.5px solid var(--color);
+}
+
+#hero .date .day {
+  font-family: "Cairo", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: var(--second-color);
+  line-height: 10px;
+}
+#hero .date .day span {
+  display: block;
+  text-align: center;
+  font-size: clamp(32px, 6vw, 50px);
+  font-weight: 900;
+  line-height: 70px;
+  color: var(--gold-color);
+}
+#hero a {
+  background-color: var(--second-color);
+  color: white;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  font-family: "Cairo", sans-serif;
+  transition: all 0.5s ease;
+}
+#hero a i {
+  color: var(--gold-color);
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+#hero a:hover {
+  opacity: 90%;
+}
+#hero a:hover i {
+  transform: scale(1.1) rotate(20deg);
+}
