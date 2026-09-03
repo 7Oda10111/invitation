@@ -454,7 +454,7 @@ body {
 #comment .comment-list {
   background-color: var(--light-color);
   width: 75%;
-  min-width: 350px;
+  min-width: 300px;
 
   border-radius: 10px;
   border: var(--color) solid 1.5px;
