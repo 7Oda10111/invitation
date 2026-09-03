@@ -2,6 +2,7 @@
   --color: #92400e;
   --gold-color: #a16207;
   --light-color: #fdf8ed;
+  --second-light-color: #f5ead0;
   --second-color: #0f3d2e;
 }
 
@@ -13,28 +14,34 @@ body {
   background-color: var(--light-color);
   border: var(--color) 1px solid;
   border-radius: 2px;
-  margin-inline: 40px;
+  margin-inline: 20px;
   margin-block: 10px;
 }
-#hero .container{
-  position: relative;
-  min-height: 70dvh;
+
+#hero .container {
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: 1.5px dotted var(--color);
 }
 #hero .flower {
-  width: clamp(130px, 20vw, 180px);
+  width: clamp(80px, 20vw, 180px);
   position: absolute;
-  left: -60px;
-  top: -20px;
+  top: 1%;
+  left: -2%;
   transform: rotate(-45deg);
 }
 #hero .logo {
-  width: 15%;
+  width: 100%;
+  min-height: 0;
+  max-width: 200px;
   display: block;
   margin: 20px auto;
+  flex-grow: 2;
+  object-fit: contain;
 }
+
 #hero h3 {
   font-family: "Markazi Text", serif;
   font-weight: 900;
@@ -43,7 +50,8 @@ body {
   word-spacing: 10px;
 }
 #hero .name-parent {
- width: 100%;
+  width: 100%;
+  flex-grow: 1;
   max-width: 400px;
   margin: auto;
   display: flex;
@@ -51,7 +59,8 @@ body {
   align-items: center;
   gap: clamp(10px, 4vw, 25px);
   flex-wrap: wrap;
-  padding-inline: 10px;}
+  padding-inline: 10px;
+}
 #hero h1 {
   font-family: "Aref Ruqaa", serif;
   display: inline-block;
@@ -95,12 +104,14 @@ body {
   border-inline-end: 0.5px solid var(--color);
 }
 
-#hero .date .day {
+#hero .date .day,
+#hero .date .day .time {
   font-family: "Cairo", sans-serif;
   font-weight: 900;
   font-size: 20px;
   color: var(--second-color);
   line-height: 10px;
+  display: inline-block;
 }
 #hero .date .day span {
   display: block;
@@ -131,3 +142,335 @@ body {
 #hero a:hover i {
   transform: scale(1.1) rotate(20deg);
 }
+/* start counter section*/
+#counter {
+  padding-block: 50px;
+  background-color: var(--second-light-color);
+  border-bottom: 1.5px solid var(--color);
+  position: relative;
+  overflow: hidden;
+}
+
+#counter h2 {
+  font-family: "Markazi Text", serif;
+  text-align: center;
+  color: var(--second-color);
+  padding-block: 30px;
+  font-weight: 900;
+  max-width: 500px;
+  width: 80%;
+  margin: auto;
+  border-bottom: #92400e solid 2px;
+  position: relative;
+}
+#counter h2 .left {
+  width: 15%;
+  position: absolute;
+  bottom: -12%;
+  left: -5%;
+}
+
+#counter h2 .right {
+  width: 15%;
+  position: absolute;
+  bottom: -12%;
+  right: -5%;
+}
+#counter .counter-parent {
+  margin-block: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+#counter .counter-parent .counter-box {
+  padding: 20px 10px;
+  min-width: 80px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: var(--color) solid 1.5px;
+  border-radius: 10px;
+  background-color: #f5ead0bd;
+}
+#counter .counter-parent .counter-box span {
+  font-family: "Cairo", sans-serif;
+  font-weight: 900;
+  font-size: 300%;
+}
+#counter .counter-parent .counter-box p {
+  font-family: "Cairo", sans-serif;
+  color: var(--gold-color);
+  font-size: 20px;
+  font-weight: 700;
+}
+#counter .side-flower {
+  max-width: 250px;
+  width: 60%;
+  transform: rotate(-20deg);
+  position: absolute;
+  bottom: 0;
+  right: -120px;
+  z-index: 0;
+}
+#counter .counter-box:has(#hour) {
+  position: relative;
+  z-index: 1;
+}
+/* end counter section*/
+
+/* start calender section*/
+
+#calender .container {
+  padding-block: 50px;
+  border-bottom: 1.5px dotted var(--color);
+}
+#calender h2 {
+  font-family: "Aref Ruqaa", serif;
+  font-size: 90px;
+  font-weight: 700;
+  color: var(--gold-color);
+  position: relative;
+}
+#calender p {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--second-color);
+  line-height: 40px;
+  margin-top: 30px;
+  padding-inline: 10px;
+}
+#calender .img-parent {
+  width: 100%;
+}
+#calender h2 .flower {
+  width: 10%;
+  min-width: 100px;
+}
+
+/* end calender section*/
+
+/* start location section*/
+#location {
+  padding-block: 50px;
+  background-color: var(--second-light-color);
+  border-bottom: 1.5px solid var(--color);
+  position: relative;
+}
+#location h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 50px;
+  text-align: center;
+  color: var(--second-color);
+  padding-block: 40px;
+  font-weight: 900;
+  max-width: 500px;
+  width: 50%;
+  margin: auto;
+  border-bottom: #92400e solid 2px;
+  position: relative;
+}
+#location h3 img {
+  width: 30%;
+  min-width: 100px;
+  transform: translateX(-50%) translateY(50%) rotate(-25deg);
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  right: auto;
+}
+#location .details {
+  width: 100%;
+  margin-top: 10%;
+  padding-block: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#location .details .box {
+  padding: 20px 10px;
+  min-width: 80px;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  border: var(--color) solid 1.5px;
+  border-radius: 10px;
+  background-color: var(--light-color);
+}
+#location .details .box p {
+  font-family: "Cairo", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--gold-color);
+  line-height: 40px;
+}
+#location .details .box i {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--second-color);
+}
+#location iframe {
+  width: 100%;
+  max-width: 400px;
+  height: 450px;
+  margin: auto;
+  display: block;
+  border: var(--color) solid;
+  border-radius: 10px;
+}
+#location a {
+  background-color: var(--second-color);
+  color: white;
+  display: block;
+  width: fit-content;
+  margin: 40px auto;
+  font-family: "Cairo", sans-serif;
+  transition: all 0.5s ease;
+}
+#location a i {
+  color: var(--gold-color);
+  font-size: 20px;
+  transition: all 0.5s ease;
+  margin-right: 5px;
+}
+
+#location a:hover {
+  opacity: 90%;
+}
+#location a:hover i {
+  transform: scale(1.1) rotate(20deg);
+}
+#location .bottom-flower {
+  width: 20%;
+  min-width: 200px;
+  position: absolute;
+  bottom: 0;
+
+  left: 50%;
+  transform: translateX(-50%) translateY(50%);
+}
+#photo .container {
+  padding-block: 50px;
+  border-bottom: 1.5px dotted var(--color);
+}
+#photo h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 50px;
+  text-align: center;
+  color: var(--second-color);
+  padding-block: 40px;
+  font-weight: 900;
+  max-width: 500px;
+  width: 90%;
+  margin: auto;
+  border-bottom: #92400e solid 2px;
+  position: relative;
+}
+#photo .carousel-item img {
+  border: var(--color) solid;
+
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+#photo button i {
+  color: var(--color);
+  font-size: 40px;
+}
+#photo .carousel-indicators [data-bs-target] {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+
+  background-color: #a16207;
+  margin: 5px;
+  display: inline-block;
+}
+#photo h3 img {
+  width: 10%;
+  min-width: 70px;
+}
+
+/* end location section*/
+/* start comment section*/
+#comment {
+  padding-block: 50px;
+  background-color: var(--second-light-color);
+  border-bottom: 1.5px solid var(--color);
+  position: relative;
+}
+#comment h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 50px;
+  text-align: center;
+  color: var(--second-color);
+  padding-block: 40px;
+  font-weight: 900;
+  max-width: 300px;
+  width: 60%;
+  margin: auto;
+  border-bottom: #92400e solid 2px;
+  position: relative;
+}
+#comment h3 img {
+  width: 30%;
+  min-width: 150px;
+  transform: translateX(-50%) translateY(50%) rotate(-25deg);
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  right: auto;
+}
+#comment .form-comment {
+  min-width: 300px;
+}
+#comment .comment-btn {
+  background-color: var(--second-color);
+  color: white;
+  display: block;
+  margin: 20px auto;
+  font-family: "Cairo", sans-serif;
+  transition: all 0.5s ease;
+  min-width: 300px;
+}
+#comment .comment-btn i {
+  color: var(--gold-color);
+  font-size: 20px;
+  transition: all 0.5s ease;
+  margin-right: 10px;
+}
+
+#comment .comment-btn:hover {
+  opacity: 90%;
+}
+#comment .comment-btn:hover i {
+  transform: scale(1.1) rotate(20deg);
+}
+#comment .comment-list {
+  background-color: var(--light-color);
+  width: 75%;
+  min-width: 350px;
+
+  border-radius: 10px;
+  border: var(--color) solid 1.5px;
+}
+#comment .comment-list .comment-name{
+    padding-inline: 40px;
+  padding-top: 20px;
+    font-family: "Cairo", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--gold-color);
+}
+#comment .comment-list .comment-text{
+    padding-inline: 40px;
+  padding-bottom: 20px;
+}
+
+
+/* end comment section*/
